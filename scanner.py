@@ -4,6 +4,7 @@ from tabnanny import verbose
 import scapy.all as scapy
 import bottele
 import Conector
+import mysql.connector
 
 
 
@@ -27,12 +28,12 @@ for enviado,recivido in respuesta:
 
 totalIp=len(clientes)
 b=0
-a=''
+a=""
 prendidas = []
 comp=""
 ip=''
+
 for i in range (totalIp):
-    Conector.conexion()
     a=clientes[i][0]
     Conector.consulta(a)
     if ip != None:
